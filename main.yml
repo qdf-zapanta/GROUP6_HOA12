@@ -78,7 +78,6 @@
       with_items: "{{ unnecessary_services }}"
       ignore_errors: yes
 
-    # Task 4: Security Policy Improvements
     - name: Set a message of the day
       copy:
         dest: /etc/motd
@@ -97,3 +96,9 @@
       with_items:
         - /etc/issue
         - /etc/issue.net
+
+  handlers:
+    - name: Reload SSH
+      service:
+        name: sshd
+        state: reloaded
