@@ -2,8 +2,8 @@
   become: true
   vars:
     allowed_ssh_networks:
-      - 192.168.56.120/24
-      - 192.168.56.122/24
+      - 192.168.5.235/24
+      - 10.0.3.15/24
 
     unnecessary_services:
       - postfix
